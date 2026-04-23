@@ -1,6 +1,10 @@
+provider "aws" {
+  region = "ap-south-1"
+}
+
 resource "aws_instance" "demo" {
   ami           = "ami-05d2d839d4f73aafb"
-  instance_type = "t2.small"
+  instance_type = "t2.micro"
 
   subnet_id = "subnet-0b3d913d19707b019"
 
