@@ -18,7 +18,7 @@ data "aws_subnets" "default" {
 # Create EC2 instance
 resource "aws_instance" "demo" {
   ami           = "ami-05d2d839d4f73aafb"   # Amazon Linux / Ubuntu (region-specific)
-  instance_type = "t2.micro"
+  instance_type = "t3.micro"
 
   subnet_id = data.aws_subnets.default.ids[0]
 
